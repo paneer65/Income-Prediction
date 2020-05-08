@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split
 
 def cleaning(df):
  #checking for null colums
- print (df.isnull().sum()) 
+ print (df.isnull().sum())
 
  #Replacing different formats of missing values using simpleImputer
  imputer = Imputer(missing_values = np.nan, strategy = 'median')
@@ -139,7 +139,7 @@ def main():
  y_pred = regressor.predict(test)
  #saving results to submission csv file
  dataset = pandas.DataFrame({'Instance': ins, 'Income': y_pred}, columns=['Instance', 'Income'])
- dataset.to_csv('tcd ml 2019-20 income prediction submission file.csv')
+ dataset.to_csv('results.csv')
 
 
 
